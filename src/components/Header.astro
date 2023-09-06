@@ -1,0 +1,41 @@
+---
+import CardInfo from "./CardInfo.astro";
+
+const data = [
+  {
+    label: "Posts",
+    number: "100",
+  },
+  {
+    label: "Followers",
+    number: "2,242",
+  },
+  {
+    label: "Following",
+    number: "1,432",
+  },
+];
+---
+
+<header class="w-full flex flex-col items-center">
+  <section class="w-full">
+    <div class="mt-10 w-32 md:w-36 rounded-3xl mx-auto">
+      <img
+        class="rounded-3xl"
+        src="/assets/profilePhoto.png"
+        alt="Profile Photo"
+      />
+    </div>
+    <h1 class="text-xl mt-3 text-center text-[#4E5150] font-semibold md:text-2xl">
+      Rodney Cotton
+    </h1>
+    <h2 class="text-[#A9A9A9] text-center font-semibold text-xs mt-1 md:text-sm">
+      Helsinki, Finland
+    </h2>
+  </section>
+  <section class="flex w-4/5 mt-3 justify-center gap-5">
+    {
+        data.map( (item)=> <CardInfo label={item.label} number={item.number}/>)
+    }
+  </section>
+</header>

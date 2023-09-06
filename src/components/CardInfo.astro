@@ -1,0 +1,13 @@
+---
+const { label, number } = Astro.props
+
+---
+
+<div class="bg-[#E5E5E5] w-32 h-14  flex flex-col rounded-xl items-center justify-center md:w-32 md:h-16">
+    <p class="text-[#4E5150] font-semibold text-xs md:text-base">
+        {number}
+    </p>
+    <p class="text-[#BDBDBD] font-semibold text-xs md:text-base">
+        {label}
+    </p>
+</div>
